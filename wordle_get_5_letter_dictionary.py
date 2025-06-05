@@ -2,6 +2,9 @@ import pickle
 from nltk.corpus import words
 import os
 
+# this file oppens the commonWords.cvs, which is a collection of the most common words of the English Language
+# it then returns a file of exclusively 5 letter word to be used for the game.
+
 def writeDict(wl):
     f = open("wordle_5_letter_dictionary.txt", "w")
     x = [i.lower() for i in wl if len(i) == 5]
