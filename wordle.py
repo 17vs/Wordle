@@ -6,10 +6,6 @@ f = open("wordle_5_letter_dictionary.txt", "r")
 all_answers = f.read().split()
 f.close()
 
-# c = open("wordle_most_common_5_dictionary.txt", "r")
-# word_list = c.read().split()
-# c.close()
-
 def userInput():
     while True:
         try:
@@ -66,7 +62,6 @@ def answerCompare(word, answer, count_word, count_answer):
         counter = 0
         if i in word:
             if i in more_than_one_answer or i in more_than_one_word:
-            # if i in more_than_one_answer:
                 if i in more_than_one_answer and i in more_than_one_word:
                     for x in index_answer[i]:
                         if x in index_word[i]:
@@ -109,7 +104,6 @@ count_answer = letterCount(answer)
 
 print("")
 print("Guess: {}".format(answer))
-# final = answerCompare(word, answer, count_word, count_answer)
 final = [i for i in answerCompare(word, answer, count_word, count_answer).values()]
 print(final)
 print("")
@@ -125,26 +119,6 @@ while final != ["green" for i in range(5)]:
 
 print("Answer: {}".format(word))
 
-
-
-
-
-
-
-
-# txt = "hello"
-# result1 = txt.index("l")
-# result2 = txt.index("l", (result1 + 1))
-
-# print("{}, {}".format(result1, result2))
-
-
-# count = {}
-# for s in txt:
-#   if s in count:
-#     count[s] += 1
-#   else:
-#     count[s] = 1
 
 # for key in count:
 #   if count[key] > 1:
